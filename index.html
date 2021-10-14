@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+    <link rel="stylesheet"
+        href="assets/vendors/colorlib-regform-11/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/vendors/colorlib-regform-11/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/vendors/colorlib-regform-11/css/style.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/album.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header id="accueil" class="d-flex flex-wrap justify-content-center align-items-center py-3">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <span class="logo">
+                    <img src="assets/images/logo.svg" alt="logo">
+                </span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#accueil" class="nav-link active" aria-current="page">Accueil</a></li>
+                <li class="nav-item"><a href="#apropos" class="nav-link">Réservation</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Enregistrement</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">A propos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contactez-nous</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active"
+                aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                class=""></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item item1 active">
+                <div class="container">
+                    <div class="carousel-caption text-center">
+                        <div class="caption-container text-start">
+                            <h2 class="display-6">
+                                Et si vous vous évadiez en
+                                <br>
+                                <span class="display-3">Malaisie?</span>
+                            </h2>
+                            <br>
+                            <button type="button" class="btn btn-sm btn-primary">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item item2">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="caption-container">
+                            <h2 class="display-5">
+                                Sur les plages paradisiaques
+                                <br>
+                                de
+                                <span class="display-2">Tunisie</span>
+                            </h2>
+                            <br>
+                            <button type="button" class="btn btn-sm btn-primary">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item item3">
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <div class="caption-container text-start">
+                            <h2 class="display-4">
+                                Achetez dès maintenant
+                                <br>
+                                <span class="display-6">vos billets aux meilleurs prix!</span>
+                            </h2>
+                            <br>
+                            <button type="button" class="btn btn-sm btn-primary">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">next</span>
+        </button>
+    </div>
+
+    <div id='apropos' class="titre pt-5 bg-light text-center">
+        <h1 class="display-4">Bienvenue!</h1>
+    </div>
+
+    <div class="section-booking-form bg-light">
+        <div class="container container-booking-form">
+            <form id="booking-form" class="booking-form" method="POST">
+                <div class="form-group">
+                    <div class="form-destination">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="EX. HAWAII" />
+                    </div>
+                    <div class="form-date-from form-icon">
+                        <label for="date_from">De</label>
+                        <input type="text" id="date_from" class="date_from" placeholder="Date départ" />
+                    </div>
+                    <div class="form-date-to form-icon">
+                        <label for="date_to">à</label>
+                        <input type="text" id="date_to" class="date_to" placeholder="Date arrivée" />
+                    </div>
+                    <div class="form-quantity">
+                        <label for="quantity">Quantité</label>
+                        <span class="modify-qty plus" onClick="Tang()"><i class="zmdi zmdi-chevron-up"></i></span>
+                        <input type="number" name="quantity" id="quantity" value="0" min="0" class="nput-text qty text">
+                        <span class="modify-qty minus" onClick="Giam()"><i class="zmdi zmdi-chevron-down"></i></span>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" id="submit" class="submit" value="Book now" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" alt="Thumbnail" style="height: 225px; width: 100%; display: block;"
+                            src="assets/images/piscine-framissima-allegro-isora-_512764_panobd.jpg"
+                            data-holder-rendered="true">
+                        <div class="card-body">
+                            <p class="card-text">Partez maintenant en Grèce!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary">En savoir plus</button>
+                                </div>
+                                <div class="prix text-muted">
+                                    <span>dès</span>
+                                    <span>390</span>
+                                    <span>
+                                        <span>€</span>
+                                        <span class="text-uppercase">ttc</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="promo">
+                                <div class="title">20% off</div>
+                                <div class="expire">Expire dans 6 jours!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" alt="Thumbnail" style="height: 225px; width: 100%; display: block;"
+                            src="assets/images/Beach-Landscape-Photography-Seascapes-09-1200x675.jpg"
+                            data-holder-rendered="true">
+                        <div class="card-body">
+                            <p class="card-text">Partez maintenant en Tunisie!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary">En savoir plus</button>
+                                </div>
+                                <div class="prix text-muted">
+                                    <span>dès</span>
+                                    <span>265</span>
+                                    <span>
+                                        <span>€</span>
+                                        <span class="text-uppercase">ttc</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" alt="Thumbnail" style="height: 225px; width: 100%; display: block;"
+                            src="assets/images/2ofn_47970864-6c5b-4ee4-b5b9-55dff49b6a55.jpg"
+                            data-holder-rendered="true">
+                        <div class="card-body">
+                            <p class="card-text">Partez maintenant à Punta Cana!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary">En savoir plus</button>
+                                </div>
+                                <div class="prix text-muted">
+                                    <span>dès</span>
+                                    <span>580</span>
+                                    <span>
+                                        <span>€</span>
+                                        <span class="text-uppercase">ttc</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" alt="Thumbnail" style="height: 225px; width: 100%; display: block;"
+                            src="assets/images/plage-jumbo-vista-sol-punta-cana-beach-resort---spa_484171_panobd.jpg"
+                            data-holder-rendered="true">
+                        <div class="card-body">
+                            <p class="card-text">Partez maintenant en Malaisie!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary">En savoir plus</button>
+                                </div>
+                                <div class="prix text-muted">
+                                    <span>dès</span>
+                                    <span>480</span>
+                                    <span>
+                                        <span>€</span>
+                                        <span class="text-uppercase">ttc</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" alt="Thumbnail" style="height: 225px; width: 100%; display: block;"
+                            src="assets/images/piscine-framissima-allegro-isora-_512764_panobd.jpg"
+                            data-holder-rendered="true">
+                        <div class="card-body">
+                            <p class="card-text">Partez maintenant à Bali!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary">En savoir plus</button>
+                                </div>
+                                <div class="prix text-muted">
+                                    <div class="prix text-muted">
+                                        <span>dès</span>
+                                        <span>299</span>
+                                        <span>
+                                            <span>€</span>
+                                            <span class="text-uppercase">ttc</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" alt="Thumbnail" style="height: 225px; width: 100%; display: block;"
+                            src="assets/images/plage-framissima-royal-karthago-resort---thalasso-_482104_panobd.jpg"
+                            data-holder-rendered="true">
+                        <div class="card-body">
+                            <p class="card-text">Partez maintenant aux îles Canaries!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary">En savoir plus</button>
+                                </div>
+                                <div class="prix text-muted">
+                                    <span>dès</span>
+                                    <span>2199</span>
+                                    <span>
+                                        <span>€</span>
+                                        <span class="text-uppercase">ttc</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo">
+                            <div class="title">10% off</div>
+                            <div class="expire">Expire dans 3 jours!</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-2">
+                    <h5>Besoin d'aide?</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nous contacter</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Remboursement</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Réclamations</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Passagers a mobilité
+                                réduite</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Modalités et frais</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>A propos</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Guides Destinations/a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Bons plans</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos Partenaires</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos collaborations</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Destinations</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tunisie</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Malaisie</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">îles Canaries</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Bali</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Bora bora</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 offset-1">
+                    <form>
+                        <h5>Abonnez-vous à notre newsletter</h5>
+                        <p>Résumé mensuel de ce qui est nouveau et excitant de notre part.</p>
+                        <div class="d-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Adresse e-mail</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Adresse e-mail">
+                            <button class="btn btn-primary" type="button">S'abonner</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>© 2021 Company, Inc. Tous droits réservés.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/e32e69f57a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/colorlib-regform-11/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendors/colorlib-regform-11/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/vendors/colorlib-regform-11/js/main.js"></script>
+</body>
+
+</html>

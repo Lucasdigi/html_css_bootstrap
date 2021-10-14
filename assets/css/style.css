@@ -1,0 +1,54 @@
+.logo img {
+    height: 80px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus-visible {
+    background-color: orange;
+    border-color: orange;
+    box-shadow: 0 0 0 0 transparent !important;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.nav-link {
+    color: orange;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: orangered;
+}
+
+.nav-pills .nav-link.active {
+    color: white;
+    background-color: orange;
+}
+
+.nav-pills .nav-link.active:hover,
+.nav-pills .nav-link.active:focus {
+    color: white;
+    background-color: orange;
+}
+
+footer .fab {
+    font-size: 25px;
+    color: gray;
+}
+
+footer .fab:hover {
+    color: orange;
+}
+

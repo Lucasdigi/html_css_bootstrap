@@ -1,0 +1,57 @@
+.album .promo {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 180px;
+    border: 1px solid red;
+    border-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.album .promo .title {
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.album .promo .expire {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.album .prix {
+    display: flex;
+    flex-direction: row;
+}
+
+.album .prix span {
+    color: orangered;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.album .prix > span {
+    padding: 0 2px;
+    
+}
+
+.album .prix > span:nth-child(1) {
+    align-self: flex-end;
+}
+
+.album .prix > span:nth-child(2) {
+    align-self: flex-end;
+    font-size: 35px;
+    line-height: 32px;
+}
+
+.album .prix > span:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
