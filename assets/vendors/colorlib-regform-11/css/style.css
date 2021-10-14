@@ -3,7 +3,7 @@
 }
 
 .booking-form {
-  background: rgba(11, 13, 24, 0.25);
+  background: rgba(11, 13, 24, 0.05);
   max-width: 900px;
   margin: 0 auto;
   border-radius: 10px;
@@ -227,4 +227,8 @@
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+.ui-state-highlight {
+  background: orange !important;
+  color: white !important;
+}
+
